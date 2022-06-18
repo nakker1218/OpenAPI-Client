@@ -47,11 +47,13 @@ import 'package:openapi/openapi.dart';
 
 
 final api = Openapi().getPetsApi();
+final int limit = 56; // int | How many items to return at one time (max 100)
 
 try {
-    api.createPets();
+    final response = await api.listPets(limit);
+    print(response);
 } catch on DioError (e) {
-    print("Exception when calling PetsApi->createPets: $e\n");
+    print("Exception when calling PetsApi->listPets: $e\n");
 }
 
 ```
@@ -62,7 +64,6 @@ All URIs are relative to *http://petstore.swagger.io/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-[*PetsApi*](doc/PetsApi.md) | [**createPets**](doc/PetsApi.md#createpets) | **POST** /pets | Create a pet
 [*PetsApi*](doc/PetsApi.md) | [**listPets**](doc/PetsApi.md#listpets) | **GET** /pets | List all pets
 [*PetsApi*](doc/PetsApi.md) | [**showPetById**](doc/PetsApi.md#showpetbyid) | **GET** /pets/{petId} | Info for a specific pet
 

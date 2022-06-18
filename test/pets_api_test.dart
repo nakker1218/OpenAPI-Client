@@ -7,13 +7,6 @@ void main() {
   final instance = Openapi().getPetsApi();
 
   group(PetsApi, () {
-    // Create a pet
-    //
-    //Future createPets() async
-    test('test createPets', () async {
-      // TODO
-    });
-
     // List all pets
     //
     //Future<BuiltList<Pet>> listPets({ int limit }) async
