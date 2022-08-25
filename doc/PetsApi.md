@@ -9,46 +9,9 @@ All URIs are relative to *http://petstore.swagger.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPets**](PetsApi.md#createpets) | **POST** /pets | Create a pet
 [**listPets**](PetsApi.md#listpets) | **GET** /pets | List all pets
 [**showPetById**](PetsApi.md#showpetbyid) | **GET** /pets/{petId} | Info for a specific pet
 
-
-# **createPets**
-> createPets()
-
-Create a pet
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getPetsApi();
-
-try {
-    api.createPets();
-} catch on DioError (e) {
-    print('Exception when calling PetsApi->createPets: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listPets**
 > BuiltList<Pet> listPets(limit)
